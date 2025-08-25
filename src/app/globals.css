@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #e6ebf1;
+  --bg-high: #ffffff;
+  --bg-low: #cfd6df;
+  --accent: #5e7cff;
+  --accent-dark: #3a57e8;
+  --text: #2b2f36;
+}
+
+html, body, :root {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(255,255,255,0.9), rgba(255,255,255,0) 60%),
+    radial-gradient(1000px 700px at -10% 110%, rgba(196,204,215,0.6), rgba(196,204,215,0) 60%),
+    var(--bg);
+  color: var(--text);
+}
+
+.neu-surface {
+  background: var(--bg);
+  box-shadow: 8px 8px 16px rgba(0,0,0,0.08), -8px -8px 16px rgba(255,255,255,0.9);
+}
+
+.neu-inset {
+  background: var(--bg);
+  box-shadow: inset 8px 8px 16px rgba(0,0,0,0.08), inset -8px -8px 16px rgba(255,255,255,0.9);
+}
+
+.neu-pressable {
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.neu-pressable:active {
+  transform: translateY(1px);
+  box-shadow: inset 6px 6px 12px rgba(0,0,0,0.08), inset -6px -6px 12px rgba(255,255,255,0.9);
+}
+
+.button-surface {
+  background: linear-gradient(145deg, var(--bg-high), var(--bg-low));
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.08), -6px -6px 12px rgba(255,255,255,0.9);
+}
+
+.card-surface {
+  background: linear-gradient(145deg, #f7f9fd, #dfe6ef);
+  box-shadow: 14px 14px 28px rgba(0,0,0,0.08), -14px -14px 28px rgba(255,255,255,0.8);
+}
+
+.toggle {
+  background: var(--bg);
+  box-shadow: inset 8px 8px 16px rgba(0,0,0,0.08), inset -8px -8px 16px rgba(255,255,255,0.9);
+}
+
+.toggle-thumb {
+  background: linear-gradient(145deg, var(--bg-high), var(--bg-low));
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.12), -6px -6px 12px rgba(255,255,255,0.9);
+}
+
+.input-surface {
+  background: var(--bg);
+  box-shadow: inset 8px 8px 16px rgba(0,0,0,0.08), inset -8px -8px 16px rgba(255,255,255,0.9);
+}
+
+.badge {
+  background: linear-gradient(145deg, #ffffff, #dfe6ef);
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.07), -4px -4px 8px rgba(255,255,255,0.9);
+}
